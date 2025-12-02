@@ -1,4 +1,4 @@
-<!  doctype html>
+<! doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -27,12 +27,12 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    . meta {
+    .meta {
       color: #bdbdbd;
-      font-size: 0. 95rem;
+      font-size: 0.95rem;
       margin-top: 8px;
     }
-    .projects {
+    . projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
@@ -51,15 +51,14 @@
     }
     .thumb {
       width: 100%;
-      height: auto;           /* ← CAMBIADO: altura automática */
-      max-height: 300px;      /* ← NUEVO: límite máximo */
-      object-fit: contain;    /* ← CAMBIADO: muestra imagen completa */
+      height: 200px;
+      object-fit: cover;
       border-radius: 8px;
       background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
       margin-bottom: 12px;
-      display: block;         /* ← NUEVO: elimina espacios extraños */
+      display: block;
     }
-    . card h3 {
+    .card h3 {
       margin: 0 0 8px 0;
       color: #fff;
     }
@@ -77,15 +76,18 @@
     .play:hover {
       opacity: 0.9;
     }
-    .placeholder {
-      background: #111;
+    .placeholder-thumb {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
       border: 1px dashed #333;
       border-radius: 8px;
-      padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #666;
-      margin-bottom: 12px;
       font-size: 0.9rem;
+      margin-bottom: 12px;
     }
     footer {
       margin-top: 60px;
@@ -117,61 +119,70 @@
     </div>
     <nav>
       <a href="#projects">Proyectos</a>
-      <a href="mailto:rcjas-92@hotmail.es">Contacto</a>
+      <a href="mailto:tu@correo.com">Contacto</a>
     </nav>
   </header>
 
-  <section id="featured">
-    <h2>🎮 Proyectos Destacados</h2>
-    <div class="card">
-      <!-- Placeholder compacto hasta que tengas el embed -->
-      <div class="placeholder">
-        🎬 Próximamente: Case File: NV-51
-        <img class="thumb" src="Screenshot_0020.png" alt="Case File: NV-51 Screenshot">
-      </div>
-      
-      <img class="thumb" src="19. jpg" alt="Constitution Street Screenshot">
-      <h3>Constitution Street</h3>
-      <div class="meta">Unity · 2025 · Rol: Programación y diseño de niveles</div>
-      <p style="color:#bdbdbd;line-height:1.6;">
-        Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal.
-      </p>
-      <a class="play" href="https://norewardgames.itch.io/constitution-street" target="_blank">Jugar ahora</a>
-    </div>
-  </section>
-
   <section id="projects">
-    <h2 style="margin-top: 40px;">📦 Otros Proyectos</h2>
+    <h2>🎮 Proyectos</h2>
     <div class="projects">
       
+      <!-- Case File: NV-51 (Próximamente) -->
+      <div class="card">
+        <div class="placeholder-thumb">
+          🎬 Próximamente
+        </div>
+        <img class="thumb" src="Screenshot_0020.png" alt="Case File: NV-51 Screenshot">
+        <h3>Case File: NV-51</h3>
+        <div class="meta">Unity · 2025 · En desarrollo</div>
+        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
+          Próximo proyecto en desarrollo. Más información próximamente.
+        </p>
+        <a class="play" href="#" style="opacity:0.5;cursor:not-allowed;">Próximamente</a>
+      </div>
+
+      <!-- Constitution Street -->
+      <div class="card">
+        <img class="thumb" src="19.jpg" alt="Constitution Street Screenshot">
+        <h3>Constitution Street</h3>
+        <div class="meta">Unity · 2025 · Programación y diseño de niveles</div>
+        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
+          Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal. 
+        </p>
+        <a class="play" href="https://norewardgames.itch.io/constitution-street" target="_blank">Jugar ahora</a>
+      </div>
+
+      <!-- Get Caught -->
       <div class="card">
         <img class="thumb" src="kTWAOo.png" alt="Get Caught Screenshot">
         <h3>Get Caught</h3>
         <div class="meta">Unreal Engine 5 · 2025 · Gameplay Programming</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          Just a DEMO trying UE5. Experimenting with Unreal's gameplay framework and mechanics.
+          Just a DEMO trying UE5.  Experimenting with Unreal's gameplay framework and mechanics.
         </p>
-        <a class="play" href="https://norewardgames. itch.io/get-caught" target="_blank">Ver proyecto</a>
+        <a class="play" href="https://norewardgames.itch.io/get-caught" target="_blank">Ver proyecto</a>
       </div>
 
+      <!-- Gas Station Trip -->
       <div class="card">
-        <img class="thumb" src="7Oh2IM.jpg" alt="Gas Station Trip Screenshot">
+        <img class="thumb" src="nombre-imagen-gas-station.jpg" alt="Gas Station Trip Screenshot">
         <h3>Gas Station Trip</h3>
         <div class="meta">Unity · 2024 · Level Design</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          Exploración y narrativa ambiental en una gasolinera abandonada.
+          Exploración y narrativa ambiental en una gasolinera abandonada. 
         </p>
         <a class="play" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">Ver proyecto</a>
       </div>
 
+      <!-- Proyecto 3 (opcional, elimina si no lo necesitas) -->
       <div class="card">
         <img class="thumb" src="nombre-imagen-3.jpg" alt="Proyecto 3 Screenshot">
         <h3>Proyecto 3</h3>
         <div class="meta">Unity · 2024 · Prototype</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          Prototipo experimental de mecánicas de movimiento y física. 
+          Prototipo experimental de mecánicas de movimiento y física.
         </p>
-        <a class="play" href="https://norewardgames. itch.io/proyecto3" target="_blank">Ver proyecto</a>
+        <a class="play" href="https://norewardgames.itch.io/proyecto3" target="_blank">Ver proyecto</a>
       </div>
 
     </div>
