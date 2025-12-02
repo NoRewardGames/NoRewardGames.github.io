@@ -1,4 +1,4 @@
-<! doctype html>
+<!  doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -32,13 +32,14 @@
       font-size: 0.95rem;
       margin-top: 8px;
     }
-    . projects {
+    .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+      gap: 24px;
       margin-top: 20px;
+      max-width: 900px;  /* Limita ancho total */
     }
-    . card {
+    .card {
       background: #111218;
       border: 1px solid #1f2328;
       padding: 16px;
@@ -51,16 +52,17 @@
     }
     .thumb {
       width: 100%;
-      height: 200px;
+      aspect-ratio: 1 / 1;  /* Cuadrado perfecto */
       object-fit: cover;
       border-radius: 8px;
       background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
       margin-bottom: 12px;
       display: block;
     }
-    .card h3 {
+    . card h3 {
       margin: 0 0 8px 0;
       color: #fff;
+      font-size: 1.1rem;
     }
     .play {
       display: inline-block;
@@ -72,22 +74,10 @@
       text-decoration: none;
       font-weight: 500;
       transition: opacity 0.2s;
+      font-size: 0.9rem;
     }
     .play:hover {
       opacity: 0.9;
-    }
-    .placeholder-thumb {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
-      border: 1px dashed #333;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 12px;
     }
     footer {
       margin-top: 60px;
@@ -109,13 +99,20 @@
       color: #667eea;
       font-weight: 500;
     }
+    
+    /* Responsive: 1 columna en móviles */
+    @media (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <div>
       <h1>NoRewardGames</h1>
-      <div class="meta">Game Developer · Unity · C# · Unreal Engine 5 · C++ (learning) · Blueprints (learning · Level Design</div>
+      <div class="meta">Game Developer · Unity · C# · Unreal Engine 5 · C++ (Learning) · Blueprints (Learning) · Level Design</div>
     </div>
     <nav>
       <a href="#projects">Proyectos</a>
@@ -127,13 +124,13 @@
     <h2>🎮 Proyectos</h2>
     <div class="projects">
       
-      <!-- Case File: NV-51 (Próximamente) -->
+      <!-- Case File: NV-51 -->
       <div class="card">
         <img class="thumb" src="Screenshot_0020.png" alt="Case File: NV-51 Screenshot">
         <h3>Case File: NV-51</h3>
         <div class="meta">Unity · 2025 · En desarrollo</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          Próximo proyecto en desarrollo. Más información próximamente.
+          Próximo proyecto en desarrollo.  Más información próximamente.
         </p>
         <a class="play" href="#" style="opacity:0.5;cursor:not-allowed;">Próximamente</a>
       </div>
@@ -143,10 +140,10 @@
         <img class="thumb" src="19.jpg" alt="Constitution Street Screenshot">
         <h3>Constitution Street</h3>
         <div class="meta">Unity · 2025 · Gameplay Programming, Level Design, 3D Art</div>
-        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
+        <p style="color:#bdbdbd;line-height:1. 6;font-size:0. 9rem;">
           Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal. 
         </p>
-        <a class="play" href="https://norewardgames.itch.io/constitution-street" target="_blank">Ver Proyecto</a>
+        <a class="play" href="https://norewardgames.itch.io/constitution-street" target="_blank">Jugar ahora</a>
       </div>
 
       <!-- Get Caught -->
@@ -171,17 +168,6 @@
         <a class="play" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">Ver proyecto</a>
       </div>
 
-      <!-- Proyecto 3 (opcional, elimina si no lo necesitas) -->
-      <div class="card">
-        <img class="thumb" src="nombre-imagen-3.jpg" alt="Proyecto 3 Screenshot">
-        <h3>Proyecto 3</h3>
-        <div class="meta">Unity · 2024 · Prototype</div>
-        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          Prototipo experimental de mecánicas de movimiento y física.
-        </p>
-        <a class="play" href="https://norewardgames.itch.io/proyecto3" target="_blank">Ver proyecto</a>
-      </div>
-
     </div>
   </section>
 
@@ -189,7 +175,7 @@
     <div>
       © 2025 NoRewardGames · 
       <a href="https://github.com/NoRewardGames">GitHub</a> · 
-      <a href="https://norewardgames.itch.io">itch.io</a> · 
+      <a href="https://norewardgames.itch. io">itch.io</a> · 
       <a href="https://www.linkedin.com/in/jonatan-quijada-carrizosa/">LinkedIn</a>
     </div>
   </footer>
