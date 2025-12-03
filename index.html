@@ -35,10 +35,10 @@
     .projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
-      gap: 28px;
+      gap: 60px;
       margin-top: 20px;
       width: 100%;  /* Ocupa todo el ancho disponible */
-      max-width: 1400px;  /* Límite en pantallas muy grandes */
+      max-width: none;  /* Límite en pantallas muy grandes */
       align-items: start;
     }
     .card {
@@ -54,7 +54,7 @@
     }
     .thumb {
       width: 100%;
-      height: 400px;  /* Cuadrado perfecto */
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 8px;
       background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
