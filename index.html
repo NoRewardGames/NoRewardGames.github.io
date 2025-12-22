@@ -1,4 +1,4 @@
-<! doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -9,7 +9,7 @@
       font-family: system-ui, Arial; 
       margin: 0; 
       padding: 28px; 
-      background:  #0f1113; 
+      background: #0f1113; 
       color: #e6e6e6; 
     }
     header {
@@ -21,8 +21,8 @@
     }
     h1 {
       margin: 0;
-      font-size: 2rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-size:  2rem;
+      background:  linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -36,7 +36,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
-      margin-top:  20px;
+      margin-top: 20px;
       width: 95%;
       max-width: none;
     }
@@ -44,7 +44,7 @@
       background: #111218;
       border:  1px solid #1f2328;
       padding: 20px;
-      border-radius:  12px;
+      border-radius: 12px;
       transition: transform 0.2s, border-color 0.2s;
     }
     .card:hover {
@@ -61,7 +61,7 @@
       display: block;
     }
     .card h3 {
-      margin: 0 0 8px 0;
+      margin:  0 0 8px 0;
       color: #fff;
       font-size: 1.1rem;
     }
@@ -77,13 +77,13 @@
       transition: opacity 0.2s;
       font-size: 0.95rem;
     }
-    . play:hover {
+    .play:hover {
       opacity:  0.9;
     }
     footer {
       margin-top: 80px;
       padding-top: 20px;
-      border-top:  1px solid #1f2328;
+      border-top: 1px solid #1f2328;
       color: #9aa0a6;
       font-size: 0.9rem;
       text-align: center;
@@ -109,7 +109,7 @@
     /* Botón de idioma */
     .lang-btn {
       background: #667eea;
-      color: white;
+      color:  white;
       border: none;
       padding: 8px 14px;
       border-radius:  6px;
@@ -122,17 +122,12 @@
       opacity: 0.85;
     }
     
-    /* SISTEMA DE IDIOMAS CORREGIDO */
-    .lang-es { display: none; }
-    .lang-en { display: none; }
+    /* Sistema de idiomas SIMPLIFICADO */
+    [data-lang="es"] { display: none; }
+    [data-lang="en"] { display: none; }
     
-    /* Por defecto:  español visible */
-    body: not(.english) .lang-es { display: inline; }
-    body:not(.english) .lang-es. block { display: block; }
-    
-    /* Cuando está en inglés */
-    body.english .lang-en { display: inline; }
-    body.english . lang-en.block { display: block; }
+    body[data-page-lang="es"] [data-lang="es"] { display: inline; }
+    body[data-page-lang="en"] [data-lang="en"] { display:  inline; }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -145,22 +140,22 @@
     }
   </style>
 </head>
-<body>
+<body data-page-lang="es">
   <header>
     <div>
       <h1>NoRewardGames</h1>
       <div class="meta">Game Developer · Unity · C# · Unreal Engine 5 · C++ (Learning) · Blueprints (Learning) · Level Design</div>
     </div>
     <nav>
-      <a href="#projects" class="lang-es">Proyectos</a>
-      <a href="#projects" class="lang-en">Projects</a>
+      <a href="#projects" data-lang="es">Proyectos</a>
+      <a href="#projects" data-lang="en">Projects</a>
       
-      <a href="mailto:rcjas-92@hotmail.es" class="lang-es">Contacto</a>
-      <a href="mailto:rcjas-92@hotmail.es" class="lang-en">Contact</a>
+      <a href="mailto:rcjas-92@hotmail.es" data-lang="es">Contacto</a>
+      <a href="mailto:rcjas-92@hotmail.es" data-lang="en">Contact</a>
       
       <button class="lang-btn" onclick="toggleLanguage()">
-        <span class="lang-es">🌐 EN</span>
-        <span class="lang-en">🌐 ES</span>
+        <span data-lang="es">🌐 EN</span>
+        <span data-lang="en">🌐 ES</span>
       </button>
     </nav>
   </header>
@@ -171,27 +166,29 @@
       Jonathan Quijada - Game Developer Portfolio
     </h2>
     
-    <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom:  24px;">
-      <span class="lang-es">Soy un <strong style="color: #fff;">Game Developer</strong> especializado en Unity y C#.  Me apasiona crear experiencias de terror psicológico y narrativa inmersiva.</span><span class="lang-en">I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. I'm passionate about creating psychological horror experiences and immersive narratives.</span>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom: 24px;">
+      <span data-lang="es">Soy un <strong style="color: #fff;">Game Developer</strong> especializado en Unity y C#.  Me apasiona crear experiencias de terror psicológico y narrativa inmersiva.</span>
+      <span data-lang="en">I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. I'm passionate about creating psychological horror experiences and immersive narratives.</span>
     </p>
     
     <p style="font-size: 1rem; line-height: 1.6; color: #9aa0a6;">
-      <span class="lang-es">Actualmente trabajo en proyectos indie de horror y estoy aprendiendo Unreal Engine 5. Aquí puedes ver algunos de mis trabajos. </span><span class="lang-en">Currently working on indie horror projects and learning Unreal Engine 5. Check out some of my work below.</span>
+      <span data-lang="es">Actualmente trabajo en proyectos indie de horror y estoy aprendiendo Unreal Engine 5. Aquí puedes ver algunos de mis trabajos.</span>
+      <span data-lang="en">Currently working on indie horror projects and learning Unreal Engine 5. Check out some of my work below.</span>
     </p>
     
     <div style="margin-top: 28px;">
-      <a href="#projects" class="play lang-es" style="margin-right: 12px;">Ver Proyectos</a>
-      <a href="#projects" class="play lang-en" style="margin-right: 12px;">View Projects</a>
+      <a href="#projects" class="play" data-lang="es" style="margin-right: 12px;">Ver Proyectos</a>
+      <a href="#projects" class="play" data-lang="en" style="margin-right: 12px;">View Projects</a>
       
-      <a href="mailto:rcjas-92@hotmail.es" class="play lang-es" style="background: transparent; border: 1px solid #667eea;">Contacto</a>
-      <a href="mailto:rcjas-92@hotmail.es" class="play lang-en" style="background:  transparent; border: 1px solid #667eea;">Contact</a>
+      <a href="mailto: rcjas-92@hotmail. es" class="play" data-lang="es" style="background: transparent; border: 1px solid #667eea;">Contacto</a>
+      <a href="mailto:rcjas-92@hotmail.es" class="play" data-lang="en" style="background: transparent; border: 1px solid #667eea;">Contact</a>
     </div>
   </section>
 
   <section id="projects">
     <h2>
-      <span class="lang-es">🎮 Proyectos</span>
-      <span class="lang-en">🎮 Projects</span>
+      <span data-lang="es">🎮 Proyectos</span>
+      <span data-lang="en">🎮 Projects</span>
     </h2>
     
     <div class="projects">
@@ -202,15 +199,15 @@
         <h3>Case File: NV-51</h3>
         <div class="meta">
           Unity · 2025 · 
-          <span class="lang-es">En desarrollo</span>
-          <span class="lang-en">In development</span>
+          <span data-lang="es">En desarrollo</span>
+          <span data-lang="en">In development</span>
         </div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span class="lang-es">Próximo proyecto en desarrollo.  Más información próximamente.</span>
-          <span class="lang-en">Upcoming project in development. More information coming soon.</span>
+          <span data-lang="es">Próximo proyecto en desarrollo.  Más información próximamente.</span>
+          <span data-lang="en">Upcoming project in development. More information coming soon.</span>
         </p>
-        <a class="play lang-es" href="#" style="opacity: 0.5;cursor:not-allowed;">Próximamente</a>
-        <a class="play lang-en" href="#" style="opacity:0.5;cursor:not-allowed;">Coming Soon</a>
+        <a class="play" data-lang="es" href="#" style="opacity:0.5;cursor:not-allowed;">Próximamente</a>
+        <a class="play" data-lang="en" href="#" style="opacity:0.5;cursor:not-allowed;">Coming Soon</a>
       </div>
 
       <!-- Constitution Street -->
@@ -219,11 +216,11 @@
         <h3>Constitution Street</h3>
         <div class="meta">Unity · 2025 · Gameplay Programming, Level Design, 3D Art</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span class="lang-es">Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal. </span>
-          <span class="lang-en">You're a nephew who decides to surprise your uncles by showing up unannounced at their house, but something goes wrong.</span>
+          <span data-lang="es">Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal.</span>
+          <span data-lang="en">You're a nephew who decides to surprise your uncles by showing up unannounced at their house, but something goes wrong.</span>
         </p>
-        <a class="play lang-es" href="https://norewardgames. itch.io/constitution-street" target="_blank">Ver proyecto</a>
-        <a class="play lang-en" href="https://norewardgames.itch.io/constitution-street" target="_blank">View Project</a>
+        <a class="play" data-lang="es" href="https://norewardgames.itch.io/constitution-street" target="_blank">Ver proyecto</a>
+        <a class="play" data-lang="en" href="https://norewardgames.itch.io/constitution-street" target="_blank">View Project</a>
       </div>
 
       <!-- Get Caught -->
@@ -232,11 +229,11 @@
         <h3>Get Caught</h3>
         <div class="meta">Unreal Engine 5 · 2025 · Gameplay Programming</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span class="lang-es">Demo experimental con Unreal Engine 5. Explorando el framework de gameplay y mecánicas de UE5.</span>
-          <span class="lang-en">Experimental demo with Unreal Engine 5. Experimenting with UE5's gameplay framework and mechanics.</span>
+          <span data-lang="es">Demo experimental con Unreal Engine 5. Explorando el framework de gameplay y mecánicas de UE5.</span>
+          <span data-lang="en">Experimental demo with Unreal Engine 5. Experimenting with UE5's gameplay framework and mechanics.</span>
         </p>
-        <a class="play lang-es" href="https://norewardgames.itch.io/get-caught" target="_blank">Ver proyecto</a>
-        <a class="play lang-en" href="https://norewardgames.itch.io/get-caught" target="_blank">View Project</a>
+        <a class="play" data-lang="es" href="https://norewardgames.itch.io/get-caught" target="_blank">Ver proyecto</a>
+        <a class="play" data-lang="en" href="https://norewardgames.itch.io/get-caught" target="_blank">View Project</a>
       </div>
 
       <!-- Gas Station Trip -->
@@ -245,11 +242,11 @@
         <h3>Gas Station Trip</h3>
         <div class="meta">Unity · 2024 · Gameplay Programming, Level Design, 3D Art</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span class="lang-es">Tras una parada en una gasolinera para hacer una compra de emergencia, tomas un café que tiene un sabor extraño y empiezas a ver cosas raras.</span>
-          <span class="lang-en">After stopping at a gas station for an emergency purchase, you drink a coffee that tastes strange and start seeing weird things.</span>
+          <span data-lang="es">Tras una parada en una gasolinera para hacer una compra de emergencia, tomas un café que tiene un sabor extraño y empiezas a ver cosas raras.</span>
+          <span data-lang="en">After stopping at a gas station for an emergency purchase, you drink a coffee that tastes strange and start seeing weird things.</span>
         </p>
-        <a class="play lang-es" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">Ver proyecto</a>
-        <a class="play lang-en" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">View Project</a>
+        <a class="play" data-lang="es" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">Ver proyecto</a>
+        <a class="play" data-lang="en" href="https://norewardgames.itch. io/gas-station-trip" target="_blank">View Project</a>
       </div>
 
     </div>
@@ -266,13 +263,18 @@
 
   <script>
     function toggleLanguage() {
-      document.body.classList.toggle('english');
-      localStorage.setItem('language', document.body.classList.contains('english') ? 'en' : 'es');
+      const body = document.body;
+      const currentLang = body.getAttribute('data-page-lang');
+      const newLang = currentLang === 'es' ? 'en' : 'es';
+      body.setAttribute('data-page-lang', newLang);
+      localStorage.setItem('language', newLang);
+      console.log('Idioma cambiado a:', newLang); // Para debug
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      if (localStorage.getItem('language') === 'en') {
-        document.body.classList.add('english');
+      const savedLang = localStorage.getItem('language');
+      if (savedLang) {
+        document.body.setAttribute('data-page-lang', savedLang);
       }
     });
   </script>
