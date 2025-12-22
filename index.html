@@ -1,4 +1,4 @@
-<!  doctype html>
+<! doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -9,7 +9,7 @@
       font-family: system-ui, Arial; 
       margin: 0; 
       padding: 28px; 
-      background: #0f1113; 
+      background:  #0f1113; 
       color: #e6e6e6; 
     }
     header {
@@ -27,12 +27,12 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    . meta {
+    .meta {
       color: #bdbdbd;
       font-size: 0.95rem;
       margin-top: 8px;
     }
-    . projects {
+    .projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
@@ -44,7 +44,7 @@
       background: #111218;
       border:  1px solid #1f2328;
       padding: 20px;
-      border-radius: 12px;
+      border-radius:  12px;
       transition: transform 0.2s, border-color 0.2s;
     }
     .card:hover {
@@ -109,7 +109,7 @@
     /* Botón de idioma */
     .lang-btn {
       background: #667eea;
-      color:  white;
+      color: white;
       border: none;
       padding: 8px 14px;
       border-radius:  6px;
@@ -122,17 +122,17 @@
       opacity: 0.85;
     }
     
-    /* Sistema de idiomas CORREGIDO */
-    .lang-es { display: inline; }
-    . lang-en { display: none; }
+    /* SISTEMA DE IDIOMAS CORREGIDO */
+    .lang-es { display: none; }
+    .lang-en { display: none; }
     
-    . lang-es.block { display: block; }
-    .lang-en.block { display: none; }
+    /* Por defecto:  español visible */
+    body: not(.english) .lang-es { display: inline; }
+    body:not(.english) .lang-es. block { display: block; }
     
-    body.english . lang-es { display: none ! important; }
-    body.english .lang-en { display: inline !important; }
-    
-    body.english .lang-en. block { display: block !important; }
+    /* Cuando está en inglés */
+    body.english .lang-en { display: inline; }
+    body.english . lang-en.block { display: block; }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -165,25 +165,20 @@
     </nav>
   </header>
 
-  <!-- INTRO (único, con texto condicional) -->
+  <!-- INTRO -->
   <section id="intro" style="max-width: 800px; margin: 60px auto; text-align: center;">
     <h2 style="font-size: 1.8rem; margin-bottom: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
       Jonathan Quijada - Game Developer Portfolio
     </h2>
     
-    <!-- Párrafo 1 -->
-    <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom: 24px;">
-      <span class="lang-es">Soy un <strong style="color: #fff;">Game Developer</strong> especializado en Unity y C#.  Me apasiona crear experiencias de terror psicológico y narrativa inmersiva. </span>
-      <span class="lang-en">I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. I'm passionate about creating psychological horror experiences and immersive narratives.</span>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom:  24px;">
+      <span class="lang-es">Soy un <strong style="color: #fff;">Game Developer</strong> especializado en Unity y C#.  Me apasiona crear experiencias de terror psicológico y narrativa inmersiva.</span><span class="lang-en">I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. I'm passionate about creating psychological horror experiences and immersive narratives.</span>
     </p>
     
-    <!-- Párrafo 2 -->
-    <p style="font-size:  1rem; line-height: 1.6; color: #9aa0a6;">
-      <span class="lang-es">Actualmente trabajo en proyectos indie de horror y estoy aprendiendo Unreal Engine 5. Aquí puedes ver algunos de mis trabajos. </span>
-      <span class="lang-en">Currently working on indie horror projects and learning Unreal Engine 5. Check out some of my work below.</span>
+    <p style="font-size: 1rem; line-height: 1.6; color: #9aa0a6;">
+      <span class="lang-es">Actualmente trabajo en proyectos indie de horror y estoy aprendiendo Unreal Engine 5. Aquí puedes ver algunos de mis trabajos. </span><span class="lang-en">Currently working on indie horror projects and learning Unreal Engine 5. Check out some of my work below.</span>
     </p>
     
-    <!-- Botones -->
     <div style="margin-top: 28px;">
       <a href="#projects" class="play lang-es" style="margin-right: 12px;">Ver Proyectos</a>
       <a href="#projects" class="play lang-en" style="margin-right: 12px;">View Projects</a>
@@ -194,7 +189,6 @@
   </section>
 
   <section id="projects">
-    <!-- TÍTULO -->
     <h2>
       <span class="lang-es">🎮 Proyectos</span>
       <span class="lang-en">🎮 Projects</span>
@@ -228,7 +222,7 @@
           <span class="lang-es">Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal. </span>
           <span class="lang-en">You're a nephew who decides to surprise your uncles by showing up unannounced at their house, but something goes wrong.</span>
         </p>
-        <a class="play lang-es" href="https://norewardgames.itch.io/constitution-street" target="_blank">Ver proyecto</a>
+        <a class="play lang-es" href="https://norewardgames. itch.io/constitution-street" target="_blank">Ver proyecto</a>
         <a class="play lang-en" href="https://norewardgames.itch.io/constitution-street" target="_blank">View Project</a>
       </div>
 
@@ -278,7 +272,7 @@
 
     window.addEventListener('DOMContentLoaded', () => {
       if (localStorage.getItem('language') === 'en') {
-        document.body. classList.add('english');
+        document.body.classList.add('english');
       }
     });
   </script>
