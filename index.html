@@ -9,7 +9,7 @@
       font-family: system-ui, Arial; 
       margin: 0; 
       padding: 28px; 
-      background: #0f1113; 
+      background:  #0f1113; 
       color: #e6e6e6; 
     }
     header {
@@ -21,9 +21,9 @@
     }
     h1 {
       margin: 0;
-      font-size:  2rem;
-      background:  linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip: text;
+      font-size: 2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip:  text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
@@ -32,11 +32,11 @@
       font-size: 0.95rem;
       margin-top: 8px;
     }
-    .projects {
+    . projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
-      margin-top: 20px;
+      margin-top:  20px;
       width: 95%;
       max-width: none;
     }
@@ -44,7 +44,7 @@
       background: #111218;
       border:  1px solid #1f2328;
       padding: 20px;
-      border-radius: 12px;
+      border-radius:  12px;
       transition: transform 0.2s, border-color 0.2s;
     }
     .card:hover {
@@ -61,7 +61,7 @@
       display: block;
     }
     .card h3 {
-      margin:  0 0 8px 0;
+      margin: 0 0 8px 0;
       color: #fff;
       font-size: 1.1rem;
     }
@@ -77,13 +77,13 @@
       transition: opacity 0.2s;
       font-size: 0.95rem;
     }
-    .play:hover {
+    . play:hover {
       opacity:  0.9;
     }
     footer {
       margin-top: 80px;
       padding-top: 20px;
-      border-top: 1px solid #1f2328;
+      border-top:  1px solid #1f2328;
       color: #9aa0a6;
       font-size: 0.9rem;
       text-align: center;
@@ -109,7 +109,7 @@
     /* Botón de idioma */
     .lang-btn {
       background: #667eea;
-      color:  white;
+      color: white;
       border: none;
       padding: 8px 14px;
       border-radius:  6px;
@@ -122,12 +122,22 @@
       opacity: 0.85;
     }
     
-    /* Sistema de idiomas SIMPLIFICADO */
-    [data-lang="es"] { display: none; }
-    [data-lang="en"] { display: none; }
+    /* SISTEMA DE IDIOMAS CORREGIDO */
+    /* Ocultar todo por defecto */
+    [data-lang="es"],
+    [data-lang="en"] {
+      display:  none;
+    }
     
-    body[data-page-lang="es"] [data-lang="es"] { display: inline; }
-    body[data-page-lang="en"] [data-lang="en"] { display:  inline; }
+    /* Mostrar español cuando body tiene data-page-lang="es" */
+    body[data-page-lang="es"] [data-lang="es"] {
+      display: inline;
+    }
+    
+    /* Mostrar inglés cuando body tiene data-page-lang="en" */
+    body[data-page-lang="en"] [data-lang="en"] {
+      display: inline;
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -166,8 +176,8 @@
       Jonathan Quijada - Game Developer Portfolio
     </h2>
     
-    <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom: 24px;">
-      <span data-lang="es">Soy un <strong style="color: #fff;">Game Developer</strong> especializado en Unity y C#.  Me apasiona crear experiencias de terror psicológico y narrativa inmersiva.</span>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom:  24px;">
+      <span data-lang="es">Soy un <strong style="color: #fff;">Game Developer</strong> especializado en Unity y C#.  Me apasiona crear experiencias de terror psicológico y narrativa inmersiva. </span>
       <span data-lang="en">I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. I'm passionate about creating psychological horror experiences and immersive narratives.</span>
     </p>
     
@@ -180,7 +190,7 @@
       <a href="#projects" class="play" data-lang="es" style="margin-right: 12px;">Ver Proyectos</a>
       <a href="#projects" class="play" data-lang="en" style="margin-right: 12px;">View Projects</a>
       
-      <a href="mailto: rcjas-92@hotmail. es" class="play" data-lang="es" style="background: transparent; border: 1px solid #667eea;">Contacto</a>
+      <a href="mailto:rcjas-92@hotmail.es" class="play" data-lang="es" style="background: transparent; border: 1px solid #667eea;">Contacto</a>
       <a href="mailto:rcjas-92@hotmail.es" class="play" data-lang="en" style="background: transparent; border: 1px solid #667eea;">Contact</a>
     </div>
   </section>
@@ -216,10 +226,10 @@
         <h3>Constitution Street</h3>
         <div class="meta">Unity · 2025 · Gameplay Programming, Level Design, 3D Art</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span data-lang="es">Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal.</span>
+          <span data-lang="es">Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal. </span>
           <span data-lang="en">You're a nephew who decides to surprise your uncles by showing up unannounced at their house, but something goes wrong.</span>
         </p>
-        <a class="play" data-lang="es" href="https://norewardgames.itch.io/constitution-street" target="_blank">Ver proyecto</a>
+        <a class="play" data-lang="es" href="https://norewardgames. itch.io/constitution-street" target="_blank">Ver proyecto</a>
         <a class="play" data-lang="en" href="https://norewardgames.itch.io/constitution-street" target="_blank">View Project</a>
       </div>
 
@@ -246,7 +256,7 @@
           <span data-lang="en">After stopping at a gas station for an emergency purchase, you drink a coffee that tastes strange and start seeing weird things.</span>
         </p>
         <a class="play" data-lang="es" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">Ver proyecto</a>
-        <a class="play" data-lang="en" href="https://norewardgames.itch. io/gas-station-trip" target="_blank">View Project</a>
+        <a class="play" data-lang="en" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">View Project</a>
       </div>
 
     </div>
@@ -268,9 +278,9 @@
       const newLang = currentLang === 'es' ? 'en' : 'es';
       body.setAttribute('data-page-lang', newLang);
       localStorage.setItem('language', newLang);
-      console.log('Idioma cambiado a:', newLang); // Para debug
     }
 
+    // Cargar idioma guardado al iniciar
     window.addEventListener('DOMContentLoaded', () => {
       const savedLang = localStorage.getItem('language');
       if (savedLang) {
