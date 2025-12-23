@@ -1,15 +1,9 @@
-<!  doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio - NoRewardGames</title>
-  <style>
+<style>
     body { 
       font-family: system-ui, Arial; 
       margin: 0; 
       padding: 28px; 
-      background: #0f1113; 
+      background:  #0f1113; 
       color: #e6e6e6; 
     }
     header {
@@ -17,43 +11,44 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      margin-bottom:  40px;
+      margin-bottom:   40px;
     }
     h1 {
       margin: 0;
       font-size: 2rem;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      -webkit-text-fill-color:  transparent;
+      background-clip:  text;
     }
     .meta {
       color: #bdbdbd;
       font-size: 0.95rem;
       margin-top: 8px;
     }
-    .projects {
+    . projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
-      margin-top:  20px;
+      margin-top:   20px;
       width: 95%;
       max-width: none;
+      align-items: start;  /* Alinea las tarjetas arriba */
     }
-    .card {
+    . card {
       background: #111218;
-      border:  1px solid #1f2328;
+      border:   1px solid #1f2328;
       padding: 20px;
-      border-radius:  12px;
-      transition:  transform 0.2s, border-color 0.2s;
+      border-radius:   12px;
+      transition:   transform 0.2s, border-color 0.2s;
     }
     .card:hover {
       transform: translateY(-4px);
-      border-color:  #667eea;
+      border-color:   #667eea;
     }
     .thumb {
       width: 100%;
-      aspect-ratio: 1 / 1;
+      height: 400px;  /* Altura fija para todas las imágenes */
       object-fit: cover;
       border-radius: 8px;
       background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
@@ -61,29 +56,29 @@
       display: block;
     }
     .card h3 {
-      margin:  0 0 8px 0;
+      margin:   0 0 8px 0;
       color: #fff;
       font-size: 1.1rem;
     }
-    .play {
+    . play {
       display: inline-block;
       margin-top: 12px;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       padding: 10px 18px;
-      border-radius:  6px;
-      text-decoration:  none;
-      font-weight: 500;
+      border-radius:   6px;
+      text-decoration:   none;
+      font-weight:  500;
       transition: opacity 0.2s;
       font-size: 0.95rem;
     }
-    . play:hover {
-      opacity:  0.9;
+    .  play:hover {
+      opacity:   0.9;
     }
     footer {
       margin-top: 80px;
-      padding-top:  20px;
-      border-top:  1px solid #1f2328;
+      padding-top:   20px;
+      border-top:   1px solid #1f2328;
       color: #9aa0a6;
       font-size: 0.9rem;
       text-align: center;
@@ -93,8 +88,8 @@
       color: #9ad0ff;
       text-decoration: none;
     }
-    a: hover {
-      text-decoration:  underline;
+    a:  hover {
+      text-decoration:   underline;
     }
     nav a {
       margin-left: 16px;
@@ -104,108 +99,13 @@
     
     @media (max-width: 768px) {
       .projects {
-        grid-template-columns:  1fr;
+        grid-template-columns:   1fr;
+      }
+      .thumb {
+        height: 300px;  /* Altura menor en móviles */
       }
       body {
         padding: 20px;
       }
     }
   </style>
-</head>
-<body>
-  <header>
-    <div>
-      <h1>NoRewardGames</h1>
-      <div class="meta">Game Developer · Unity · C# · Unreal Engine 5 · C++ (Learning) · Blueprints (Learning) · Level Design</div>
-    </div>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="mailto:rcjas-92@hotmail.es">Contact</a>
-    </nav>
-  </header>
-
-  <!-- INTRO -->
-  <section id="intro" style="max-width: 800px; margin: 60px auto; text-align: center;">
-    <h2 style="font-size: 1.8rem; margin-bottom: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-      Jonathan Quijada - Game Developer Portfolio
-    </h2>
-    
-    <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom:  24px;">
-      I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. 
-      I'm passionate about creating psychological horror experiences and immersive narratives.
-    </p>
-    
-    <p style="font-size: 1rem; line-height: 1.6; color: #9aa0a6;">
-      Currently working on indie horror projects and learning Unreal Engine 5. 
-      Check out some of my work below. 
-    </p>
-    
-    <div style="margin-top: 28px;">
-      <a href="#projects" class="play" style="margin-right: 12px;">View Projects</a>
-      <a href="mailto:rcjas-92@hotmail.es" class="play" style="background: transparent; border: 1px solid #667eea;">Contact</a>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>🎮 Projects</h2>
-    
-    <div class="projects">
-      
-      <!-- Case File:  NV-51 -->
-      <div class="card">
-        <img class="thumb" src="Screenshot_0020.png" alt="Case File: NV-51 Screenshot">
-        <h3>Case File: NV-51</h3>
-        <div class="meta">Unity · 2025 · In development</div>
-        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          Upcoming project in development. More information coming soon.
-        </p>
-        <a class="play" href="#" style="opacity:0.5;cursor:not-allowed;">Coming Soon</a>
-      </div>
-
-      <!-- Constitution Street -->
-      <div class="card">
-        <img class="thumb" src="19. png" alt="Constitution Street Screenshot">
-        <h3>Constitution Street</h3>
-        <div class="meta">Unity · 2025 · Gameplay Programming, Level Design, 3D Art</div>
-        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          You're a nephew who decides to surprise your uncles by showing up unannounced at their house, but something goes wrong. 
-        </p>
-        <a class="play" href="https://norewardgames.itch.io/constitution-street" target="_blank">View Project</a>
-      </div>
-
-      <!-- Get Caught -->
-      <div class="card">
-        <img class="thumb" src="kTWAOo.png" alt="Get Caught Screenshot">
-        <h3>Get Caught</h3>
-        <div class="meta">Unreal Engine 5 · 2025 · Gameplay Programming</div>
-        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          Experimental demo with Unreal Engine 5. Experimenting with UE5's gameplay framework and mechanics.
-        </p>
-        <a class="play" href="https://norewardgames.itch.io/get-caught" target="_blank">View Project</a>
-      </div>
-
-      <!-- Gas Station Trip -->
-      <div class="card">
-        <img class="thumb" src="7Oh2IM.jpg" alt="Gas Station Trip Screenshot">
-        <h3>Gas Station Trip</h3>
-        <div class="meta">Unity · 2024 · Gameplay Programming, Level Design, 3D Art</div>
-        <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          After stopping at a gas station for an emergency purchase, you drink a coffee that tastes strange and start seeing weird things.
-        </p>
-        <a class="play" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">View Project</a>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <div>
-      © 2025 NoRewardGames · 
-      <a href="https://github.com/NoRewardGames">GitHub</a> · 
-      <a href="https://norewardgames.itch. io">itch.io</a> · 
-      <a href="https://www.linkedin.com/in/jonatan-quijada-carrizosa/">LinkedIn</a>
-    </div>
-  </footer>
-</body>
-</html>
