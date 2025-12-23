@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es">
+<!  doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,7 +9,7 @@
       font-family: system-ui, Arial; 
       margin: 0; 
       padding: 28px; 
-      background:  #0f1113; 
+      background: #0f1113; 
       color: #e6e6e6; 
     }
     header {
@@ -23,7 +23,7 @@
       margin: 0;
       font-size: 2rem;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip:  text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
@@ -32,7 +32,7 @@
       font-size: 0.95rem;
       margin-top: 8px;
     }
-    . projects {
+    .projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
@@ -45,7 +45,7 @@
       border:  1px solid #1f2328;
       padding: 20px;
       border-radius:  12px;
-      transition: transform 0.2s, border-color 0.2s;
+      transition:  transform 0.2s, border-color 0.2s;
     }
     .card:hover {
       transform: translateY(-4px);
@@ -61,7 +61,7 @@
       display: block;
     }
     .card h3 {
-      margin: 0 0 8px 0;
+      margin:  0 0 8px 0;
       color: #fff;
       font-size: 1.1rem;
     }
@@ -72,7 +72,7 @@
       color: white;
       padding: 10px 18px;
       border-radius:  6px;
-      text-decoration: none;
+      text-decoration:  none;
       font-weight: 500;
       transition: opacity 0.2s;
       font-size: 0.95rem;
@@ -82,7 +82,7 @@
     }
     footer {
       margin-top: 80px;
-      padding-top: 20px;
+      padding-top:  20px;
       border-top:  1px solid #1f2328;
       color: #9aa0a6;
       font-size: 0.9rem;
@@ -96,53 +96,15 @@
     a: hover {
       text-decoration:  underline;
     }
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
     nav a {
+      margin-left: 16px;
       color: #667eea;
       font-weight: 500;
     }
     
-    /* Botón de idioma */
-    .lang-btn {
-      background: #667eea;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius:  6px;
-      cursor:  pointer;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: opacity 0.2s;
-    }
-    .lang-btn:hover {
-      opacity: 0.85;
-    }
-    
-    /* SISTEMA DE IDIOMAS CORREGIDO */
-    /* Ocultar todo por defecto */
-    [data-lang="es"],
-    [data-lang="en"] {
-      display:  none;
-    }
-    
-    /* Mostrar español cuando body tiene data-page-lang="es" */
-    body[data-page-lang="es"] [data-lang="es"] {
-      display: inline;
-    }
-    
-    /* Mostrar inglés cuando body tiene data-page-lang="en" */
-    body[data-page-lang="en"] [data-lang="en"] {
-      display: inline;
-    }
-    
-    /* Responsive */
     @media (max-width: 768px) {
       .projects {
-        grid-template-columns: 1fr;
+        grid-template-columns:  1fr;
       }
       body {
         padding: 20px;
@@ -150,23 +112,15 @@
     }
   </style>
 </head>
-<body data-page-lang="es">
+<body>
   <header>
     <div>
       <h1>NoRewardGames</h1>
       <div class="meta">Game Developer · Unity · C# · Unreal Engine 5 · C++ (Learning) · Blueprints (Learning) · Level Design</div>
     </div>
     <nav>
-      <a href="#projects" data-lang="es">Proyectos</a>
-      <a href="#projects" data-lang="en">Projects</a>
-      
-      <a href="mailto:rcjas-92@hotmail.es" data-lang="es">Contacto</a>
-      <a href="mailto:rcjas-92@hotmail.es" data-lang="en">Contact</a>
-      
-      <button class="lang-btn" onclick="toggleLanguage()">
-        <span data-lang="es">🌐 EN</span>
-        <span data-lang="en">🌐 ES</span>
-      </button>
+      <a href="#projects">Projects</a>
+      <a href="mailto:rcjas-92@hotmail.es">Contact</a>
     </nav>
   </header>
 
@@ -177,29 +131,24 @@
     </h2>
     
     <p style="font-size: 1.2rem; line-height: 1.8; color: #bdbdbd; margin-bottom:  24px;">
-      <span data-lang="es">Soy un <strong style="color: #fff;">Game Developer</strong> especializado en Unity y C#.  Me apasiona crear experiencias de terror psicológico y narrativa inmersiva. </span>
-      <span data-lang="en">I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. I'm passionate about creating psychological horror experiences and immersive narratives.</span>
+      I'm a <strong style="color: #fff;">Game Developer</strong> specialized in Unity and C#. 
+      I'm passionate about creating psychological horror experiences and immersive narratives.
     </p>
     
     <p style="font-size: 1rem; line-height: 1.6; color: #9aa0a6;">
-      <span data-lang="es">Actualmente trabajo en proyectos indie de horror y estoy aprendiendo Unreal Engine 5. Aquí puedes ver algunos de mis trabajos.</span>
-      <span data-lang="en">Currently working on indie horror projects and learning Unreal Engine 5. Check out some of my work below.</span>
+      Currently working on indie horror projects and learning Unreal Engine 5. 
+      Check out some of my work below. 
     </p>
     
     <div style="margin-top: 28px;">
-      <a href="#projects" class="play" data-lang="es" style="margin-right: 12px;">Ver Proyectos</a>
-      <a href="#projects" class="play" data-lang="en" style="margin-right: 12px;">View Projects</a>
-      
-      <a href="mailto:rcjas-92@hotmail.es" class="play" data-lang="es" style="background: transparent; border: 1px solid #667eea;">Contacto</a>
-      <a href="mailto:rcjas-92@hotmail.es" class="play" data-lang="en" style="background: transparent; border: 1px solid #667eea;">Contact</a>
+      <a href="#projects" class="play" style="margin-right: 12px;">View Projects</a>
+      <a href="mailto:rcjas-92@hotmail.es" class="play" style="background: transparent; border: 1px solid #667eea;">Contact</a>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
-    <h2>
-      <span data-lang="es">🎮 Proyectos</span>
-      <span data-lang="en">🎮 Projects</span>
-    </h2>
+    <h2>🎮 Projects</h2>
     
     <div class="projects">
       
@@ -207,17 +156,11 @@
       <div class="card">
         <img class="thumb" src="Screenshot_0020.png" alt="Case File: NV-51 Screenshot">
         <h3>Case File: NV-51</h3>
-        <div class="meta">
-          Unity · 2025 · 
-          <span data-lang="es">En desarrollo</span>
-          <span data-lang="en">In development</span>
-        </div>
+        <div class="meta">Unity · 2025 · In development</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span data-lang="es">Próximo proyecto en desarrollo.  Más información próximamente.</span>
-          <span data-lang="en">Upcoming project in development. More information coming soon.</span>
+          Upcoming project in development. More information coming soon.
         </p>
-        <a class="play" data-lang="es" href="#" style="opacity:0.5;cursor:not-allowed;">Próximamente</a>
-        <a class="play" data-lang="en" href="#" style="opacity:0.5;cursor:not-allowed;">Coming Soon</a>
+        <a class="play" href="#" style="opacity:0.5;cursor:not-allowed;">Coming Soon</a>
       </div>
 
       <!-- Constitution Street -->
@@ -226,11 +169,9 @@
         <h3>Constitution Street</h3>
         <div class="meta">Unity · 2025 · Gameplay Programming, Level Design, 3D Art</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span data-lang="es">Eres un sobrino que decide dar una sorpresa a sus tíos apareciendo sin previo aviso en su casa, pero algo va mal. </span>
-          <span data-lang="en">You're a nephew who decides to surprise your uncles by showing up unannounced at their house, but something goes wrong.</span>
+          You're a nephew who decides to surprise your uncles by showing up unannounced at their house, but something goes wrong. 
         </p>
-        <a class="play" data-lang="es" href="https://norewardgames. itch.io/constitution-street" target="_blank">Ver proyecto</a>
-        <a class="play" data-lang="en" href="https://norewardgames.itch.io/constitution-street" target="_blank">View Project</a>
+        <a class="play" href="https://norewardgames.itch.io/constitution-street" target="_blank">View Project</a>
       </div>
 
       <!-- Get Caught -->
@@ -239,11 +180,9 @@
         <h3>Get Caught</h3>
         <div class="meta">Unreal Engine 5 · 2025 · Gameplay Programming</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span data-lang="es">Demo experimental con Unreal Engine 5. Explorando el framework de gameplay y mecánicas de UE5.</span>
-          <span data-lang="en">Experimental demo with Unreal Engine 5. Experimenting with UE5's gameplay framework and mechanics.</span>
+          Experimental demo with Unreal Engine 5. Experimenting with UE5's gameplay framework and mechanics.
         </p>
-        <a class="play" data-lang="es" href="https://norewardgames.itch.io/get-caught" target="_blank">Ver proyecto</a>
-        <a class="play" data-lang="en" href="https://norewardgames.itch.io/get-caught" target="_blank">View Project</a>
+        <a class="play" href="https://norewardgames.itch.io/get-caught" target="_blank">View Project</a>
       </div>
 
       <!-- Gas Station Trip -->
@@ -252,11 +191,9 @@
         <h3>Gas Station Trip</h3>
         <div class="meta">Unity · 2024 · Gameplay Programming, Level Design, 3D Art</div>
         <p style="color:#bdbdbd;line-height:1.6;font-size:0.9rem;">
-          <span data-lang="es">Tras una parada en una gasolinera para hacer una compra de emergencia, tomas un café que tiene un sabor extraño y empiezas a ver cosas raras.</span>
-          <span data-lang="en">After stopping at a gas station for an emergency purchase, you drink a coffee that tastes strange and start seeing weird things.</span>
+          After stopping at a gas station for an emergency purchase, you drink a coffee that tastes strange and start seeing weird things.
         </p>
-        <a class="play" data-lang="es" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">Ver proyecto</a>
-        <a class="play" data-lang="en" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">View Project</a>
+        <a class="play" href="https://norewardgames.itch.io/gas-station-trip" target="_blank">View Project</a>
       </div>
 
     </div>
@@ -270,23 +207,5 @@
       <a href="https://www.linkedin.com/in/jonatan-quijada-carrizosa/">LinkedIn</a>
     </div>
   </footer>
-
-  <script>
-    function toggleLanguage() {
-      const body = document.body;
-      const currentLang = body.getAttribute('data-page-lang');
-      const newLang = currentLang === 'es' ? 'en' : 'es';
-      body.setAttribute('data-page-lang', newLang);
-      localStorage.setItem('language', newLang);
-    }
-
-    // Cargar idioma guardado al iniciar
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('language');
-      if (savedLang) {
-        document.body.setAttribute('data-page-lang', savedLang);
-      }
-    });
-  </script>
 </body>
 </html>
